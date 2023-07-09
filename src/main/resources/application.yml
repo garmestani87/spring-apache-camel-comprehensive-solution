@@ -1,0 +1,19 @@
+# ***** app config *****
+spring:
+  application:
+    name: SERVICE-GATEWAY
+logging:
+  level:
+    org.springframework.web.filter.CommonsRequestLoggingFilter: DEBUG
+server:
+  port: 8093
+
+logging:
+  level:
+    org.apache.camel: info
+# ***** camel config *****
+---
+camel:
+  servlet:
+    mapping:
+      context-path: /service-gateway/*
